@@ -1,7 +1,7 @@
-# Awesome Project Build with TypeORM
+# Rise Test
 
-Steps to run this project:
+To run the app, run the following in your terminal
 
-1. Run `npm i` command
-2. Setup database settings inside `data-source.ts` file
-3. Run `npm start` command
+ts-node src/index.ts
+
+it runs in port 3000
