@@ -7,6 +7,8 @@ COPY package*.json .
 
 RUN npm install
 
+RUN npx prisma generate --schema=./prisma/schema.prisma
+
 COPY . .
 
 #RUN npm run build
@@ -18,6 +20,8 @@ FROM node:20-alpine AS production
 WORKDIR /app
 
 COPY package*.json .
+
+RUN npx prisma generate --schema=./prisma/schema.prisma
 
 RUN NODE_ENV=production npm i
 #RUN npm ci --only=production
