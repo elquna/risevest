@@ -1,6 +1,4 @@
 
-
-
 import { NextFunction, Request, Response } from "express"
 import { encryption } from "../helpers/encryption"
 import { request } from "http"
@@ -46,7 +44,7 @@ export const getUsers = async(request :Request, response:Response, next :NextFun
               id:true
             }
           })
-        response.json(users);
+        response.status(200).json({data:users});
     }
     catch(error)
     {

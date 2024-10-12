@@ -24,8 +24,11 @@ import  postRoutes  from "./Routes/PostRoutes"
   });
 
 
+
     // start express server
     app.listen(3000)
+
+    export default app;
 
 
     console.log("Express server has started ")

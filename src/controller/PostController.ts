@@ -54,7 +54,7 @@ export const getUserPosts = async(request :Request, response:Response, next :Nex
         where: { userId: parseInt(id) },
       });
 
-    response.status(201).json({message:'post fetched successfully', data:posts});
+    response.status(200).json({message:'post fetched successfully', data:posts});
 
 }
 
