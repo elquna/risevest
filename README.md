@@ -47,7 +47,7 @@ LIMIT 3;
 
 
 
-#optimised query
+# Optimised query
 
 SELECT users.id, users.name, posts.title, latest_comment.content
 FROM users
