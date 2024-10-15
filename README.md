@@ -7,11 +7,13 @@ ts-node src/index.ts
 it runs in port 3000
 
 #Requirements
+
 Node 20
 NPM
 Postgres (version 13 or above)
 
-Steps
+# Steps
+
 cd into whatever directory you want work from.
 Run https://github.com/elquna/risevest.git then cd into the repo.
 After cloning the project, run cp .env .env.example on your terminal to create a new .env file from the .env.example.
@@ -19,16 +21,20 @@ Run npm install to install all the dependencies.
 npx prisma generate   
 Run ts-node src/index.ts the project in development mode.
 
+# Test URL
 
 The app is deployed in a remote test server with BASE URL  https://mocktest-4lvw.onrender.com
+
+# Postnam documentation
 
 The postman documentation can be found here https://documenter.getpostman.com/view/12000186/U16gP6v3
 
 
-#Part of the test involved a query to be optimised
+# Part of the test involved a query to be optimised
 
 
-#Query with performance issue
+# Query with performance issue
+
 SELECT users.id, users.name, posts.title, comments.content
 FROM users
 LEFT JOIN posts ON users.id = posts.userId
@@ -42,6 +48,7 @@ LIMIT 3;
 
 
 #optimised query
+
 SELECT users.id, users.name, posts.title, latest_comment.content
 FROM users
 JOIN posts ON users.id = posts.userId
